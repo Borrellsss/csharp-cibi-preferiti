@@ -11,19 +11,24 @@ BONUS Stampate a video anche il cibo di mezza classifica, cioè che si trova nel
 
 string[] food = { "hot dog", "hamburger", "wagyu", "crudo di pesce", "carbonara", "random food"};
 
-Console.WriteLine(food.Length);
+Console.WriteLine("lunghezza array:" + "" + food.Length);
 
 for(var i = 0; i < food.Length; i++) {
+    if(i == 0) {
+        Console.WriteLine("elementi array:");
+    }
     Console.WriteLine(i + "" + food[i]);
 }
 
-Console.WriteLine(food[0]);
-Console.WriteLine(food[food.Length - 1]);
+Console.WriteLine("primo elemento:" + "" + food[0]);
+Console.WriteLine("ultimo elemento:" + "" + food[food.Length - 1]);
 
 /*Bonus*/
 if(food.Length % 2 == 0) {
+    Console.WriteLine("i due elementi mediani se l'array ha lunghezza pari:");
     Console.WriteLine((food.Length / 2) - 1 + "" + food[(food.Length / 2) - 1]);
     Console.WriteLine(food.Length / 2 + "" + food[food.Length / 2]);
 } else {
+    Console.WriteLine("il singolo elemento mediano se l'array ha lunghezza dispari:");
     Console.WriteLine(food.Length / 2 + "" + food[food.Length / 2]);
 } 
