@@ -9,7 +9,7 @@ Il vostro cibo preferito ma non troppo (ultima posizione della classifica)
 Le modalità di consegna sono le solite: repo GitHub, commit e push
 BONUS Stampate a video anche il cibo di mezza classifica, cioè che si trova nella posizione mediana. Attenzione: gestire anche il caso se aveste una classifica con un numero di elementi pari. In questo caso vanno stampati i 2 elementi in centro alla vostra classifica.*/
 
-string[] food = { "hot dog", "hamburger", "wagyu", "crudo di pesce", "carbonara"};
+string[] food = { "hot dog", "hamburger", "wagyu", "crudo di pesce", "carbonara", "random food"};
 
 Console.WriteLine(food.Length);
 
@@ -20,4 +20,10 @@ for(var i = 0; i < food.Length; i++) {
 Console.WriteLine(food[0]);
 Console.WriteLine(food[food.Length - 1]);
 
-
+/*Bonus*/
+if(food.Length % 2 == 0) {
+    Console.WriteLine((food.Length / 2) - 1 + "" + food[(food.Length / 2) - 1]);
+    Console.WriteLine(food.Length / 2 + "" + food[food.Length / 2]);
+} else {
+    Console.WriteLine(food.Length / 2 + "" + food[food.Length / 2]);
+} 
