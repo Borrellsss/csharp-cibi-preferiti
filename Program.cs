@@ -226,6 +226,6 @@ for (int i = 0; i < userNumber; i++) {
         Random randomNumber = new Random();
         int newRandomNumber = randomNumber.Next(1, 100);
         randomArray[j] = newRandomNumber;
-        Console.WriteLine($"{j} - {randomArray[j].ToString()}");
+        Console.WriteLine($"{j} - {randomArray[j]}");
     }
 }
