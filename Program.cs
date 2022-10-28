@@ -296,3 +296,68 @@ for (int i = 0; i < userNumber; i++)
         Console.WriteLine($"{j} - {randomArray[j]}");
     }
 }*/
+
+/*Snack 1:
+    Dare la possibilità di inserire due parole.
+    Verificare tramite una funzione che le due parole abbiano la stessa lunghezza.
+    Se hanno la stessa lunghezza, stamparle entrambe, altrimenti stampare la più lunga delle due.*/
+
+/*Console.WriteLine("inserisci due parole");
+
+string firstUserWord = Console.ReadLine();
+
+string secondUserWord = Console.ReadLine();
+
+if(compareWordLength(firstUserWord, secondUserWord))
+{
+    Console.WriteLine(firstUserWord);
+    Console.WriteLine(secondUserWord);
+}
+else if(firstUserWord.Length > secondUserWord.Length)
+{
+    Console.WriteLine(firstUserWord);
+}
+else
+{
+    Console.WriteLine(secondUserWord);
+}
+
+bool compareWordLength(string word1, string word2)
+{
+    bool isSameLength = false;
+
+    if(word1.Length == word2.Length)
+    {
+        isSameLength = true;
+    }
+
+    return isSameLength;
+} */
+
+/*Snack 2:
+    Scrivere una funzione per verificare se un numero è pari o dispari.
+    Quindi chiedere un numero all’utente e comunicargli se è pari o dispari.*/
+
+Console.WriteLine("dimmi un numero e ti dirò se è pari o dispiari");
+
+int userNumber = Convert.ToInt32(Console.ReadLine());
+
+if(isEvenOrOdd(userNumber)) {
+    Console.WriteLine("il numero che hai scelto è pari");
+}
+else
+{
+    Console.WriteLine("il numero che hai scelto è dispari");
+}
+
+bool isEvenOrOdd(int num)
+{
+    bool isEven = false;
+
+    if(num % 2 == 0)
+    {
+        isEven = true;
+    }
+
+    return isEven;
+}
