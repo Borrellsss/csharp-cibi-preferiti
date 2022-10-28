@@ -174,7 +174,7 @@ else
     Crea un array vuoto.
     Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array.*/
 
-int[] newArray = new int[6];
+/*int[] newArray = new int[6];
 
 int currentPosition = 0;
 
@@ -208,16 +208,18 @@ for (int i = 0; i < newArray.Length; i++)
     }
 }
 
-Console.Write("]");
+Console.Write("]");*/
 
 /*Snack8:
     Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.*/
 
-/*int[] newArray = {1,2,3,4,5,6,7,8,9,10};
+/*int[] newArray = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 int sum = 0;
 
-for(int i = 0; i < newArray.Length; i++) {
-    if(i % 2 != 0) {
+for (int i = 0; i < newArray.Length; i++)
+{
+    if (i % 2 != 0)
+    {
         sum += newArray[i];
     }
 }
@@ -237,17 +239,38 @@ int counter = 0;
 
 Console.WriteLine("inserisci tanti numeri finchè la loro somma è minore di 50");
 
-while(sum < 50) {
+while (sum < 50)
+{
     int userNumber = Convert.ToInt32(Console.ReadLine());
 
-    if (userNumber > 0) {
+    if (userNumber > 0)
+    {
         newArray[counter] = userNumber;
         sum += userNumber;
         counter++;
-    } else {
+    }
+    else
+    {
         Console.WriteLine("devi inserire solo numeri maggiori di 0!");
     }
-}*/
+}
+
+Console.Write("[");
+
+for (int i = 0; i < newArray.Length; i++)
+{
+
+    if (i < newArray.Length - 1)
+    {
+        Console.Write($"{newArray[i]},");
+    }
+    else
+    {
+        Console.Write($"{newArray[i]}");
+    }
+}
+
+Console.Write("]");*/
 
 /*Random*/
 
@@ -262,11 +285,13 @@ Console.WriteLine("inserisci un numero");
 
 int userNumber = Convert.ToInt32(Console.ReadLine());
 
-for (int i = 0; i < userNumber; i++) {
+for (int i = 0; i < userNumber; i++)
+{
     int[] randomArray = new int[10];
     Console.WriteLine($"array numero: {i + 1}");
 
-    for (int j = 0; j < randomArray.Length; j++) {
+    for (int j = 0; j < randomArray.Length; j++)
+    {
         Random randomNumber = new Random();
         int newRandomNumber = randomNumber.Next(1, 100);
         randomArray[j] = newRandomNumber;
