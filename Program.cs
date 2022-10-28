@@ -279,9 +279,7 @@ Console.Write("]");*/
     Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100.
     Ogni volta che ne crei uno, stampalo a schermo.*/
 
-/*using System;
-
-Console.WriteLine("inserisci un numero");
+/*Console.WriteLine("inserisci un numero");
 
 int userNumber = Convert.ToInt32(Console.ReadLine());
 
