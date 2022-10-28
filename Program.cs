@@ -9,12 +9,14 @@ Il vostro cibo preferito ma non troppo (ultima posizione della classifica)
 Le modalità di consegna sono le solite: repo GitHub, commit e push
 BONUS Stampate a video anche il cibo di mezza classifica, cioè che si trova nella posizione mediana. Attenzione: gestire anche il caso se aveste una classifica con un numero di elementi pari. In questo caso vanno stampati i 2 elementi in centro alla vostra classifica.*/
 
-/*string[] food = { "hot dog", "hamburger", "wagyu", "crudo di pesce", "carbonara", "random food"};
+/*string[] food = { "hot dog", "hamburger", "wagyu", "crudo di pesce", "carbonara", "random food" };
 
 Console.WriteLine("lunghezza array:" + "" + food.Length);
 
-for(var i = 0; i < food.Length; i++) {
-    if(i == 0) {
+for (var i = 0; i < food.Length; i++)
+{
+    if (i == 0)
+    {
         Console.WriteLine("elementi array:");
     }
     Console.WriteLine(i + "" + food[i]);
@@ -24,11 +26,14 @@ Console.WriteLine("primo elemento:" + "" + food[0]);
 Console.WriteLine("ultimo elemento:" + "" + food[food.Length - 1]);*/
 
 /*Bonus*/
-/*if(food.Length % 2 == 0) {
+/*if (food.Length % 2 == 0)
+{
     Console.WriteLine("i due elementi mediani se l'array ha lunghezza pari:");
     Console.WriteLine((food.Length / 2) - 1 + "" + food[(food.Length / 2) - 1]);
     Console.WriteLine(food.Length / 2 + "" + food[food.Length / 2]);
-} else {
+}
+else
+{
     Console.WriteLine("il singolo elemento mediano se l'array ha lunghezza dispari:");
     Console.WriteLine(food.Length / 2 + "" + food[food.Length / 2]);
 }*/
@@ -45,9 +50,12 @@ int firstUserNumber = Convert.ToInt32(Console.ReadLine());
 
 int secondUserNumber = Convert.ToInt32(Console.ReadLine());
 
-if(firstUserNumber > secondUserNumber) {
+if (firstUserNumber > secondUserNumber)
+{
     Console.WriteLine(firstUserNumber);
-} else {
+}
+else
+{
     Console.WriteLine(secondUserNumber);
 }*/
 
@@ -62,10 +70,13 @@ string firstUserWord = Console.ReadLine();
 
 string secondUserWord = Console.ReadLine();
 
-if(firstUserWord.Length > secondUserWord.Length) {
+if (firstUserWord.Length > secondUserWord.Length)
+{
     Console.WriteLine(secondUserWord);
     Console.WriteLine(firstUserWord);
-} else {
+}
+else
+{
     Console.WriteLine(firstUserWord);
     Console.WriteLine(secondUserWord);
 }*/
@@ -80,7 +91,8 @@ if(firstUserWord.Length > secondUserWord.Length) {
 
 int sum = 0;
 
-for (int i = 0; i < 10; i++) {
+for (int i = 0; i < 10; i++)
+{
     int userNumber = Convert.ToInt32(Console.ReadLine());
     sum += userNumber;
 }
@@ -90,11 +102,12 @@ Console.WriteLine(sum);*/
 /*Snack4:
     Calcola la somma e la media dei numeri da 2 a 10.*/
 
-/*int[] numbers = {2,3,4,5,6,7,8,9,10};
+/*int[] numbers = { 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 int sum = 0;
 
-for(int i = 0; i < numbers.Length; i++) {
+for (int i = 0; i < numbers.Length; i++)
+{
     sum += numbers[i];
 }
 
@@ -115,9 +128,12 @@ Console.WriteLine(averageNumber);*/
 
 int userNumber = Convert.ToInt32(Console.ReadLine());
 
-if(userNumber % 2 == 0) {
+if (userNumber % 2 == 0)
+{
     Console.WriteLine(userNumber);
-} else {
+}
+else
+{
     Console.WriteLine(userNumber + 1);
 }*/
 
@@ -135,16 +151,22 @@ string userName = Console.ReadLine();
 
 bool isUserInList = false;
 
-for (int i = 0; i < partyPeopleList.Length; i++) {
+for (int i = 0; i < partyPeopleList.Length; i++)
+{
 
-    if(userName == partyPeopleList[i]) {
+    if (userName == partyPeopleList[i])
+    {
         isUserInList = true;
+        break;
     }
 }
 
-if(isUserInList) {
+if (isUserInList)
+{
     Console.WriteLine("benvenuto/a alla grande festa!");
-} else {
+}
+else
+{
     Console.WriteLine("mi spiace ma il tuo nome non è presente nella lista dei partecipanti");
 }*/
 
@@ -152,19 +174,41 @@ if(isUserInList) {
     Crea un array vuoto.
     Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array.*/
 
-/*int[] newArray = new int[6];
+int[] newArray = new int[6];
+
+int currentPosition = 0;
 
 Console.WriteLine("inserisci 6 numeri");
 
-for(int i = 0; i < newArray.Length; i++) {
+for (int i = 0; i < newArray.Length; i++)
+{
     int userNumber = Convert.ToInt32(Console.ReadLine());
     Console.WriteLine($"elemento dell'array prima della modifica: {i} - {newArray[i]}");
 
-    if(userNumber % 2 != 0) {
-        newArray[i] = userNumber;
-        Console.WriteLine($"elemento dell'array dopo la modifica: {i} - {newArray[i]}");
+    if (userNumber % 2 != 0)
+    {
+        newArray[currentPosition] = userNumber;
+        Console.WriteLine($"elemento dell'array dopo la modifica: {currentPosition} - {newArray[currentPosition]}");
+        currentPosition++;
     }
-}*/
+}
+
+Console.Write("[");
+
+for (int i = 0; i < newArray.Length; i++)
+{
+
+    if (i < newArray.Length - 1)
+    {
+        Console.Write($"{newArray[i]},");
+    }
+    else
+    {
+        Console.Write($"{newArray[i]}");
+    }
+}
+
+Console.Write("]");
 
 /*Snack8:
     Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.*/
@@ -212,7 +256,7 @@ while(sum < 50) {
     Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100.
     Ogni volta che ne crei uno, stampalo a schermo.*/
 
-using System;
+/*using System;
 
 Console.WriteLine("inserisci un numero");
 
@@ -228,4 +272,4 @@ for (int i = 0; i < userNumber; i++) {
         randomArray[j] = newRandomNumber;
         Console.WriteLine($"{j} - {randomArray[j]}");
     }
-}
+}*/
